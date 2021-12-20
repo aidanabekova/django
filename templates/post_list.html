@@ -8,7 +8,8 @@
 <div>
     <p><a href="/add-post/">Add post</a></p>
     <ul>
-        {% for i in post %}
+        {% for i in object_list %}
+{#        {% for i in post %}#}
          <li>
             <h2><a href="/posts/{{ i.id }}/">{{ i.title }}</a></h2>
          </li>

@@ -7,12 +7,19 @@
 <body>
 <div>
     <p><a href="/posts/">Back to all posts</a></p>
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.description }}</p>
-    <img src="{{ post.image.url }}" alt="">
+    <h2>{{ object.title }}</h2>
+    <p>{{ object.author }}</p>
+    <p>{{ object.description }}</p>
+    <img src="{{ object.image.url }}" alt="">
     <br><br>
-    created date<p>{{ post.created_date }}</p>
-    update date<p>{{ post.updated_date }}</p>
+    created date<p>{{ object.created_date }}</p>
+    updated date<p>{{ object.updated_date }}</p>
+{#    <h2>{{ post.title }}</h2>#}
+{#    <p>{{ post.description }}</p>#}
+{#    <img src="{{ post.image.url }}" alt="">#}
+{#    <br><br>#}
+{#    created date<p>{{ post.created_date }}</p>#}
+{#    update date<p>{{ post.updated_date }}</p>#}
 </div>
 <div>
     <h2>Comment: </h2>
@@ -24,6 +31,8 @@
         </li>
         {% endfor %}
     </ul>
+    <a href="/posts/{{ object.id }}/update/">Update</a>
+    <a href="/posts/{{ object.id }}/delete/">Delete?</a>
     <a href="/add-comment/">Add Comment</a>
   
 </div>
