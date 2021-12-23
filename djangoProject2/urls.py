@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('', include('bookstore.urls')),
+    path('', include('parser.urls')),
 
 
 
